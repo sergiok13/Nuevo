@@ -1,5 +1,5 @@
 version: 2
- jobs:
+jobs:
   build:
     docker:
       - image: circleci/ruby:2.4.1-node-browsers
@@ -15,6 +15,10 @@ version: 2
       name: build the jekyll site
       command: bundle exec jekyll build
  
+     - run:
+      print: Print the Current Time
+      command: date
+      
      - run:
       print: Print the Current Time
       command: date
